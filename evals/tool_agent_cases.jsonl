@@ -1,0 +1,21 @@
+{"id":"tool-001","input":"帮我计算 23 * 17","expected_tool":"calculator","expected_behavior":"调用计算器并回答 391","category":"calculation"}
+{"id":"tool-002","input":"计算 (18 + 7) / 5","expected_tool":"calculator","expected_behavior":"调用计算器并回答 5","category":"calculation"}
+{"id":"tool-003","input":"2 的 10 次方是多少？","expected_tool":"calculator","expected_behavior":"调用计算器或可靠计算并回答 1024","category":"calculation"}
+{"id":"tool-004","input":"请解释一下什么是 Agent loop","expected_tool":"none","expected_behavior":"不调用工具，直接解释概念","category":"knowledge"}
+{"id":"tool-005","input":"你能帮我总结一下工具调用 Agent 的核心流程吗？","expected_tool":"none","expected_behavior":"不调用工具，直接总结流程","category":"knowledge"}
+{"id":"tool-006","input":"在这段文本里搜索 LangGraph：OpenAI Agents SDK 和 LangGraph 都可以做 Agent 编排。","expected_tool":"search_text","expected_behavior":"调用文本搜索并指出找到了 LangGraph","category":"text_search"}
+{"id":"tool-007","input":"在这段文本里找 MCP：RAG 负责知识检索，tool calling 负责外部能力调用。","expected_tool":"search_text","expected_behavior":"调用文本搜索并说明没有找到 MCP","category":"text_search"}
+{"id":"tool-008","input":"现在几点？","expected_tool":"get_current_time","expected_behavior":"调用时间工具并返回当前时间","category":"time"}
+{"id":"tool-009","input":"请告诉我当前日期","expected_tool":"get_current_time","expected_behavior":"调用时间工具并返回当前日期","category":"time"}
+{"id":"tool-010","input":"帮我计算 100 / 0","expected_tool":"calculator","expected_behavior":"调用计算器并解释除零错误","category":"error_handling"}
+{"id":"tool-011","input":"计算 abc + 1","expected_tool":"calculator","expected_behavior":"调用计算器或拒绝无效表达式，并说明参数错误","category":"error_handling"}
+{"id":"tool-012","input":"如果工具失败了，你应该怎么办？","expected_tool":"none","expected_behavior":"不调用工具，解释错误处理策略","category":"knowledge"}
+{"id":"tool-013","input":"搜索关键词 Agent：Agent 开发需要工具调用、状态管理和评估。","expected_tool":"search_text","expected_behavior":"调用文本搜索并返回匹配信息","category":"text_search"}
+{"id":"tool-014","input":"请计算 15% 的 240","expected_tool":"calculator","expected_behavior":"调用计算器并回答 36","category":"calculation"}
+{"id":"tool-015","input":"你是谁？","expected_tool":"none","expected_behavior":"不调用工具，简短回答身份","category":"chat"}
+{"id":"tool-016","input":"请先计算 12 * 12，再告诉我这个结果是不是大于 100","expected_tool":"calculator","expected_behavior":"调用计算器并判断 144 大于 100","category":"multi_step"}
+{"id":"tool-017","input":"帮我在文本 Python, FastAPI, pytest 里找 Django","expected_tool":"search_text","expected_behavior":"调用文本搜索并说明未找到 Django","category":"text_search"}
+{"id":"tool-018","input":"为什么 eval 对 Agent 项目很重要？","expected_tool":"none","expected_behavior":"不调用工具，解释评估价值","category":"knowledge"}
+{"id":"tool-019","input":"计算 3.5 * 8","expected_tool":"calculator","expected_behavior":"调用计算器并回答 28","category":"calculation"}
+{"id":"tool-020","input":"请给我一个学习 Agent 的三步建议","expected_tool":"none","expected_behavior":"不调用工具，给出三步建议","category":"planning"}
+
