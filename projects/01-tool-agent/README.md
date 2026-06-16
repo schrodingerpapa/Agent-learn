@@ -2,6 +2,16 @@
 
 目标：实现一个最小工具调用 Agent。它可以接收用户任务，判断是否需要工具，调用本地工具，并输出带工具调用日志的最终回答。
 
+## 从零实现指南
+
+详细搭建步骤见 [IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md)。
+
+如果你是第一次学习 Agent 开发，建议按这份指南顺序操作：
+
+1. 先运行本地 rule-based 版本，理解 Agent loop。
+2. 再阅读 `tools.py`，理解工具 schema 和 handler 的关系。
+3. 最后把规则选择器替换成 LLM tool calling。
+
 ## 功能范围
 
 第一版只做 CLI，不做 Web 页面。
@@ -33,6 +43,7 @@
 ```text
 projects/01-tool-agent/
   README.md
+  IMPLEMENTATION_GUIDE.md
   FAILURES.md
   pyproject.toml
   src/tool_agent/
@@ -62,6 +73,18 @@ projects/01-tool-agent/
 23 * 17 = 391。
 ```
 
+查看完整调试流程：
+
+```powershell
+tool-agent --trace "帮我计算 23 * 17"
+```
+
+查看结构化运行结果：
+
+```powershell
+tool-agent --json "帮我计算 23 * 17"
+```
+
 ## 评估指标
 
 - 工具选择准确率：应该调用工具时是否调用了正确工具。
@@ -82,4 +105,3 @@ projects/01-tool-agent/
 - 如何判断 Agent 是“乱调用工具”还是“合理探索”？
 - 如果工具很多，如何降低选择错误？
 - 这个项目如何扩展成 RAG 助手？
-

@@ -1,0 +1,20 @@
+[project]
+name = "tool-agent"
+version = "0.1.0"
+description = "A minimal CLI tool-calling agent for learning agent loops."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+
+# CLI entrypoint:终端命令名 = 包名.模块名:函数名
+[project.scripts]
+tool-agent = "tool_agent.cli:main"
+
+[tool.pytest.ini_options]
+addopts = "-p no:cacheprovider"
+pythonpath = ["src"]
+testpaths = ["tests"]
