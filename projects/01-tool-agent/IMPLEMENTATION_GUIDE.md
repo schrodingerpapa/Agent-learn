@@ -213,7 +213,7 @@ class ToolSpec:
 `ToolSpec` 是工具暴露给 Agent 的说明书：
 
 - `name`：工具的唯一名字，应该短、稳定、语义清楚。
-- `description`：告诉 Agent 什么时候该用这个工具。
+- `description`：告诉 Agent 什么时候该用这个工具。描述写得好不好，直接决定模型 / 规则能否正确判断使用场景
 - `parameters`：JSON Schema 风格的参数定义。
 - `handler`：真正执行工具的 Python 函数。
 
@@ -229,7 +229,7 @@ class ToolSpec:
 
 ```python
 def calculate(expression: str) -> ToolResult:
-    expression = expression.strip()
+    expression = expression.strip() # 移除字符串首尾的空白字符
     tool_input = {"expression": expression}
 
     if not expression:

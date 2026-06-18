@@ -6,6 +6,8 @@
 
 详细搭建步骤见 [IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md)。
 
+项目掌握验收清单见 [MASTERY_CHECKLIST.md](MASTERY_CHECKLIST.md)。
+
 如果你是第一次学习 Agent 开发，建议按这份指南顺序操作：
 
 1. 先运行本地 rule-based 版本，理解 Agent loop。

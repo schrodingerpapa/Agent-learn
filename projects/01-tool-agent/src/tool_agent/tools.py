@@ -1,4 +1,4 @@
-from __future__ import annotations
+from __future__ import annotations # 允许类型注解提前使用未定义的类
 
 import ast
 import operator
@@ -79,7 +79,7 @@ def _eval_math_node(node: ast.AST) -> float:
 
 
 def calculate(expression: str) -> ToolResult:
-    expression = expression.strip()
+    expression = expression.strip() # 移除字符串首尾的空白字符
     tool_input = {"expression": expression}
 
     if not expression:
